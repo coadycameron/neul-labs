@@ -388,7 +388,7 @@ textarea {
 
 .rocket-wrap {
   position: fixed;
-  z-index: 30;
+  z-index: 10;
   left: 50%;
   top: 52%;
   width: 190px;
