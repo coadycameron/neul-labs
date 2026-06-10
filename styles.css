@@ -955,6 +955,33 @@ footer {
     padding: 18px 20px;
   }
 
+  .brand {
+    gap: 7px;
+    max-width: 58vw;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .brand-mark {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+
+  .header-cta {
+    padding-top: 2px;
+    padding-bottom: 4px;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .contact {
+    padding-top: 155px;
+  }
+
   .header-cta {
     font-size: 9px;
   }
@@ -1027,7 +1054,7 @@ footer {
 
   .contact {
     grid-template-columns: 1fr;
-    padding: 120px 24px 120px;
+    padding: 155px 24px 95px;
   }
 
   .contact-form {
