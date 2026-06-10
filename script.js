@@ -184,8 +184,21 @@ function updateScene() {
     1
   );
 
+  const isMobile = window.innerWidth <= 820;
+  const headerFadeStart = 0.06;
+  const headerFadeEnd = 0.34;
+  const mobileHeaderOpacity = isMobile
+    ? 1 - clamp(
+        (launchProgress - headerFadeStart) / (headerFadeEnd - headerFadeStart),
+        0,
+        1
+      )
+    : 1;
+
   root.style.setProperty("--progress", progress.toFixed(4));
   root.style.setProperty("--launch-progress", launchProgress.toFixed(4));
+  root.style.setProperty("--mobile-header-opacity", mobileHeaderOpacity.toFixed(4));
+  root.classList.toggle("mobile-header-hidden", isMobile && mobileHeaderOpacity < 0.05);
   root.style.setProperty("--sky-r", mix(239, 25, progress));
   root.style.setProperty("--sky-g", mix(112, 58, progress));
   root.style.setProperty("--sky-b", mix(58, 100, progress));
